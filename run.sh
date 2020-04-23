@@ -1,1 +1,1 @@
-python /sdcard/Download/Arsenic/sysinfo-master/SysInfo.py
+python $PWD"/SysInfo.py"
