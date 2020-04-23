@@ -17,8 +17,11 @@ import os
 from datetime import datetime
 
 # clear the screen
-print(os.system('clear'))
-
+#clean = os.system('clear')
+def clean():
+	clr = os.system('clear')
+	return clr
+clean()
 # a function that converts large number of bytes into a scaled format(kilo, giga, etc)
 
 
