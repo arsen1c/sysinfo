@@ -1,6 +1,3 @@
-# gonna use "psutil": corss platform lib for process and system monitoring 
-# and builtin "platform" module to extract your system and hardware informatino in python
-
 
 '''
 	Table of content of this Tut:
@@ -16,20 +13,13 @@ import platform
 import os
 from datetime import datetime
 
-# clear the screen
-#clean = os.system('clear')
 def clean():
 	clr = os.system('clear')
 	return clr
 clean()
-# a function that converts large number of bytes into a scaled format(kilo, giga, etc)
-
 
 '''
 	Scale bytes to its proper format
-	e.g:
-		1253656 => '1.20MB'
-		1253656678 => '1.17GB'
 '''
 def get_size(bytes, suffix="B"):
 	factor = 1024
@@ -71,20 +61,6 @@ print("\nCpu Usage Per Core:")
 for i, percentage in enumerate(psutil.cpu_percent(percpu=True, interval=1)):
 	print(f"\t\tCore{i}: {percentage}%")
 print(f"Total Cpu Usage: {psutil.cpu_percent()}%")
-
-'''
-	psutils cpu_count() returns number of cores, whereas cpu_fre()
-	returns Cpu frequency as a "namedtuple" including current, min and max frequency expressed in Mhz, 
-	you can set "percup=True" to get per CPU frequency
-
-	cpu_percent() method returns a float representing the 
-	current CPU utilization as a percentage, setting "interval" 
-	to 1 (seconds) will compare system CPU times elapsed 
-	before and after a second, we set percpu to True in 
-	order to get CPU usage of each core.
-'''
-
-
 
 
 # Network information
